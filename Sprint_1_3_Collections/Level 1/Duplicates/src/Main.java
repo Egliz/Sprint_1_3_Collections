@@ -5,10 +5,11 @@ public class Main {
 
         ArrayList<Month> listMonths = new ArrayList();
 
+        System.out.println(addMonth(listMonths));
 
     }
 
-    public static void addMonth(ArrayList<Month>listMonths) {
+    public static String addMonth(ArrayList<Month>listMonths) {
 
         listMonths.add(new Month ("Gener"));
         listMonths.add(new Month ("Febrer"));
@@ -21,5 +22,7 @@ public class Main {
         listMonths.add(new Month ("Octubre"));
         listMonths.add(new Month ("Novembre"));
         listMonths.add(new Month ("Decembre"));
+
+        return "Added months: " + listMonths;
     }
 }
