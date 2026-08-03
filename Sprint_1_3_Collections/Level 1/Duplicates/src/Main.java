@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
@@ -12,6 +10,16 @@ public class Main {
 
     public static void addMonth(ArrayList<Month>listMonths) {
 
-
+        listMonths.add(new Month ("Gener"));
+        listMonths.add(new Month ("Febrer"));
+        listMonths.add(new Month ("Març"));
+        listMonths.add(new Month ("Abril"));
+        listMonths.add(new Month ("Maig"));
+        listMonths.add(new Month ("Juny"));
+        listMonths.add(new Month ("Juliol"));
+        listMonths.add(new Month ("Septembre"));
+        listMonths.add(new Month ("Octubre"));
+        listMonths.add(new Month ("Novembre"));
+        listMonths.add(new Month ("Decembre"));
     }
 }
