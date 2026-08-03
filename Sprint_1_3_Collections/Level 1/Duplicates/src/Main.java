@@ -7,6 +7,12 @@ public class Main {
 
         System.out.println(addMonth(listMonths));
 
+        Month agost = new Month("Agost");
+        listMonths.add(7, agost);
+
+        System.out.println("The missing month was added to its " +
+                "corresponding position, and the list remains in order: " + listMonths);
+
     }
 
     public static String addMonth(ArrayList<Month>listMonths) {
