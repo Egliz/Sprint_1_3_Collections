@@ -1,7 +1,10 @@
 public class Month {
-    public final String name;
+    private final String name;
 
     public Month(String name) {
+        if(name == null || name.isBlank()) {
+            throw new IllegalArgumentException("The month name cannot be null or blank.");
+        }
         this.name = name;
     }
 

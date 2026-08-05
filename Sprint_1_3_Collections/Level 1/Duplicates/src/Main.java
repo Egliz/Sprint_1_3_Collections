@@ -16,6 +16,8 @@ public class Main {
 
         HashSet<Month> hSet = new HashSet<>(listMonths);
         System.out.println(hSet);
+
+
     }
 
     public static String addMonth(ArrayList<Month>listMonths) {
