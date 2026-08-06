@@ -1,8 +1,10 @@
+package level_1.Duplicates;
+
 public class Month {
     private final String name;
 
     public Month(String name) {
-        if(name == null || name.isBlank()) {
+        if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("The month name cannot be null or blank.");
         }
         this.name = name;
@@ -23,13 +25,12 @@ public class Month {
         return name.hashCode();
     }
 
-
     public String getName() {
         return name;
     }
 
     @Override
     public String toString() {
-    return name;
-}
+        return name;
+    }
 }
