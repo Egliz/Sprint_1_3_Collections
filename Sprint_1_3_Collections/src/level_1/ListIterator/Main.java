@@ -2,24 +2,30 @@ package level_1.ListIterator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 
 public class Main {
     public static void main(String[] args) {
-        int numsInList = 6;
 
+        System.out.println("First List:\n" + OriginalList());
+
+       /*
+        List<Integer> secondList = new ArrayList<Integer>();
+        ListIterator<Integer> it = firstList.listIterator(firstList.size());
+
+        while (it.hasPrevious()) {
+            secondList.add(it.previous());
+        }
+        System.out.println("Second List:\n" + secondList);
+    }
+*/
+}
+    public static List<Integer> OriginalList(){
         List<Integer> firstList = new ArrayList<Integer>();
-        for(int i = 0; i < numsInList; i++){
+        int numsInList = 6;
+        for (int i = 0; i < numsInList; i++) {
             firstList.add(i);
         }
-        System.out.println(firstList);
-
-        List<Integer> scondList = new ArrayList<Integer>();
-        for (int i = numsInList - 1; i >= 0; i--) {
-            scondList.add(i);
-        }
-        System.out.println(scondList);
-
-
+        return firstList;
     }
-
 }
