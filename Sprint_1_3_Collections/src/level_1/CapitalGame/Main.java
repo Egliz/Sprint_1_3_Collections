@@ -1,6 +1,4 @@
 package level_1.CapitalGame;
 
-public class Game {
-
-
+public class Main {
 }
