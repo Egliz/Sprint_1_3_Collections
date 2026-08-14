@@ -10,6 +10,9 @@ public class Main {
         System.out.println("Introduce tu nombre para empezar el juego: ");
         String userName = entry.next();
 
+        Player player = new Player(userName, 0);
+
+
     }
 
 }

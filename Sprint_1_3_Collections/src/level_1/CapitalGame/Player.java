@@ -7,7 +7,7 @@ public class Player {
     public Player (String name, int score) {
         this.name = name;
         this.score = score;
-        //FALTA EL SCANNER
+
 
     }
 
