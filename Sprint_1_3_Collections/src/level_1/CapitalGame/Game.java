@@ -33,22 +33,22 @@ public class Game {
         List<String> countries = new ArrayList<String>(hMap.keySet());
         Collections.shuffle(countries);
         int country = 0;
-        for(int i = 0; i <= 3; i++ ) {
+        for(int i = 0; i <= 9; i++ ) {
             System.out.println("What is the capital of " + countries.get(country) + "?");
             String capital = entry.next();
-            System.out.println("Introdujo el usuario: " + capital);
             String value = hMap.get(countries.get(country));
-            System.out.println("Value: " + value);
             if(value.equalsIgnoreCase(capital)) {
-                userName.setScore(userName.getScore() + 1);
+               incrementScore(userName);
                 System.out.println("Correct.");
             } else {
                 System.out.println("Incorrect.");
             }
             country ++;
-            System.out.println("Llego hasta aqui");
-            System.out.println(userName.getScore());
         }
+    }
+
+    public static void incrementScore(Player userName) {
+        userName.setScore(userName.getScore() + 1);
     }
 }
 
