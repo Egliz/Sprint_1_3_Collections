@@ -11,8 +11,9 @@ public class Main {
         String userName = entry.next();
 
         Player player = new Player(userName, 0);
-        Game.play(Game.loadCountries(), entry);
+        Game.play(Game.loadCountries(), entry, player);
 
+        //Player.setScore();
     }
 
 }

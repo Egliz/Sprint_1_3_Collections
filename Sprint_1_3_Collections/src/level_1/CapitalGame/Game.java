@@ -29,23 +29,25 @@ public class Game {
     }
 
     //bucle que muestre los 10 paises
-    public static void play (HashMap <String, String> hMap, Scanner entry) {
-
+    public static void play (HashMap <String, String> hMap, Scanner entry, Player userName) {
         List<String> countries = new ArrayList<String>(hMap.keySet());
         Collections.shuffle(countries);
-        for(int i = 0; i <= 10; i++ ) {
-            int country = 0;
-            int score = 0;
-            System.out.println("Cual es la capital de " + countries.get(country) + "?");
+        int country = 0;
+        for(int i = 0; i <= 3; i++ ) {
+            System.out.println("What is the capital of " + countries.get(country) + "?");
             String capital = entry.next();
-            String value = hMap.get(capital);
-            if(capital.equalsIgnoreCase(value)) {
-                score ++;
+            System.out.println("Introdujo el usuario: " + capital);
+            String value = hMap.get(countries.get(country));
+            System.out.println("Value: " + value);
+            if(value.equalsIgnoreCase(capital)) {
+                userName.setScore(userName.getScore() + 1);
                 System.out.println("Correct.");
             } else {
                 System.out.println("Incorrect.");
             }
             country ++;
+            System.out.println("Llego hasta aqui");
+            System.out.println(userName.getScore());
         }
     }
 }
