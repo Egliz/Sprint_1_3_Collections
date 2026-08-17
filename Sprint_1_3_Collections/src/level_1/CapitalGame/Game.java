@@ -1,14 +1,7 @@
 package level_1.CapitalGame;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.io.*;
 import java.util.*;
-
 
 public class Game {
 
@@ -28,51 +21,33 @@ public class Game {
         return hMap;
     }
 
-    //bucle que muestre los 10 paises
-    public static void play (HashMap <String, String> hMap, Scanner entry, Player userName) {
+    public static void play (HashMap <String, String> hMap, Scanner entry, Player player) {
         List<String> countries = new ArrayList<String>(hMap.keySet());
         Collections.shuffle(countries);
-        int country = 0;
         for(int i = 0; i <= 9; i++ ) {
-            System.out.println("What is the capital of " + countries.get(country) + "?");
+            System.out.println("What is the capital of " + countries.get(i) + "?");
             String capital = entry.next();
-            String value = hMap.get(countries.get(country));
+            String value = hMap.get(countries.get(i));
             if(value.equalsIgnoreCase(capital)) {
-               incrementScore(userName);
+               incrementScore(player);
                 System.out.println("Correct.");
             } else {
                 System.out.println("Incorrect.");
             }
-            country ++;
         }
     }
 
-    public static void incrementScore(Player userName) {
-        userName.setScore(userName.getScore() + 1);
+    public static void incrementScore(Player player) {
+        player.setScore(player.getScore() + 1);
+    }
+
+    public static void saveScore(Player player) {
+        String filePath = "C:\\Users\\HP\\IdeaProjects\\Sprint_1_3_Collections\\Sprint_1_3_Collections\\src\\level_1\\CapitalGame\\classificacio.txt";
+        try(BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
+          writer.write("User: " + player.getName() + "\nScore: " + player.getScore() + "\n");
+        }
+        catch (IOException e) {
+            System.out.println("Error writing to the file." + e.getMessage());
+        }
     }
 }
-
-
- /*poner los paises en una lista, luego desordenar esa lista,////
-        preguntar al usuario la capital de esa lista, esa
-        capital que introduce el usuario guardarla,
-        hacer hMap.get(clave); que esto me da el valor
-        ese valor compararlo con lo que dio el usuario
-        *  */
-
-
-//mi hashMap ponerlo en una list para aplicar la aleatoriedad
-//luego un bucle for, que muestra un pais de la list
-//se pide al usuario que introduzca la capital
-//se comprara con la que ya esta
-//puntuacion incrementa si es == sino, no incrementa
-//al finak del bucle esa puntuacion se pone en el archivo
-
-//SCANNER
-
-/*recibe Scanner (creado en main)
-tendrá un hashMap con todos los datos de countries.txt
-Almacenar países
-método que tiene un bucle for para los 10 paises (antes de esto, shuffle, para que salgan desordenados y no haya
-   chance a que se repitan)
- */
