@@ -24,4 +24,12 @@ public class Restaurant {
     public int hashCode() {
         return Objects.hash(name, score);
     }
+
+    @Override
+    public String toString() {
+        return "Restaurant{" +
+                "name='" + name + '\'' +
+                ", score=" + score +
+                '}';
+    }
 }
