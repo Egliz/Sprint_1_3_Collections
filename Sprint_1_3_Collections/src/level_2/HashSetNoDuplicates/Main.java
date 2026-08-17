@@ -8,13 +8,12 @@ public class Main {
         HashSet<Restaurant> hSet = new HashSet<Restaurant>();
 
         hSet.add(new Restaurant("Lasarte", 5));
-        Restaurant rest2 = new Restaurant("Disfrutar", 7);
-        Restaurant rest3 = new Restaurant("Lasarte", 1);
-        Restaurant rest4 = new Restaurant("Lasarte", 1);
+        hSet.add(new Restaurant("Lasarte", 5));
+        hSet.add(new Restaurant("Lasarte", 8));
+        hSet.add(new Restaurant("Disfrutar", 5));
+        hSet.add(new Restaurant("Disfrutar", 7));
 
         System.out.println(hSet);
-
-
-
+        System.out.println("Size: " + hSet.size());
     }
 }
