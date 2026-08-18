@@ -25,6 +25,16 @@ import java.util.Objects;
             return Objects.hash(name, score);
         }
 
+        public String getName() {
+            return name;
+        }
+
+
+        public int getScore() {
+            return score;
+        }
+
+
         @Override
         public String toString() {
             return "Restaurant{" +
@@ -33,3 +43,5 @@ import java.util.Objects;
                     '}';
         }
     }
+}
+
