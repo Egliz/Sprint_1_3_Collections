@@ -1,4 +1,4 @@
-package level_1.ListIterator;
+package level_1.Ex2_ListIterator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +30,5 @@ public class Main {
             secondList.add(it.previous());
         }
         return secondList;
-
     }
 }

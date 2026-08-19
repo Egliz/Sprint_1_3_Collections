@@ -1,4 +1,4 @@
-package level_1.Duplicates;
+package level_1.Ex1_Duplicates;
 
 public class Month {
     private final String name;

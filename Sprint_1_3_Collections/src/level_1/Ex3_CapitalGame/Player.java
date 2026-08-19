@@ -1,10 +1,10 @@
-package level_1.CapitalGame;
+package level_1.Ex3_CapitalGame;
 
 public class Player {
     private String name;
     private int score;
 
-    public Player (String name) {
+    public Player(String name) {
         this.name = name;
         this.score = 0;
     }

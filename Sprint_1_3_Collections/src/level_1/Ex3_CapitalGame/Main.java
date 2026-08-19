@@ -1,4 +1,4 @@
-package level_1.CapitalGame;
+package level_1.Ex3_CapitalGame;
 
 import java.util.Scanner;
 
