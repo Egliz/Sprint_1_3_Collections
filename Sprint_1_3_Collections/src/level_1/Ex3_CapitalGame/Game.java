@@ -7,7 +7,7 @@ public class Game {
 
     public static HashMap<String, String> loadCountries() {
         HashMap<String, String> hMap = new HashMap<String, String>();
-        try (BufferedReader archive = new BufferedReader(new FileReader("C:\\Users\\HP\\IdeaProjects\\Sprint_1_3_Collections\\Sprint_1_3_Collections\\src\\level_1\\CapitalGame\\countries.txt"))) {
+        try (BufferedReader archive = new BufferedReader(new FileReader("Sprint_1_3_Collections/src/resources/countries.txt"))) {
             String line = archive.readLine();
             String[] word;
             while (line != null) {
@@ -42,7 +42,7 @@ public class Game {
     }
 
     public static void saveScore(Player player) {
-        String filePath = "C:\\Users\\HP\\IdeaProjects\\Sprint_1_3_Collections\\Sprint_1_3_Collections\\src\\level_1\\CapitalGame\\classificacio.txt";
+        String filePath = "Sprint_1_3_Collections/src/resources/classificacio.txt";
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
             writer.write("User: " + player.getName() + "\nScore: " + player.getScore() + "\n");
         } catch (IOException e) {
