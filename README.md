@@ -6,34 +6,8 @@ En este proyecto se trabajan los conceptos fundamentales de las colecciones en J
 ## Estructura de carpetas
 
 El proyecto está organizado por niveles. Dentro de cada nivel hay una carpeta para cada ejercicio.
+![Project structure](Sprint_1_3_Collections/src/resources/images/javaCollectionsFolderStructure.png)
 
-src
-│   README.md
-│
-├───level_1
-│   ├───CapitalGame
-│   │       classificacio.txt
-│   │       countries.txt
-│   │       Game.java
-│   │       Main.java
-│   │       Player.java
-│   │
-│   ├───Duplicates
-│   │       Main.java
-│   │       Month.java
-│   │
-│   └───ListIterator
-│           Main.java
-│
-└───level_2
-├───HashSetNoDuplicates
-│       Main.java
-│       Restaurant.java
-│
-└───MultipleSorting
-Main.java
-Restaurant.java
-RestaurantComparator.java
 
 ## Tecnologías:
 
@@ -45,8 +19,6 @@ RestaurantComparator.java
 * Clonar el repositorio.
 * Abrir en IntelliJ o Eclipse.
 * Ejecutar Main.java.
-
-En el ejercicio `CapitalGame` es necesario tener el archivo `countries.txt` en la ubicación correspondiente para poder cargar los países y sus capitales
 
 # Nivel 1
 
